@@ -12,8 +12,7 @@ import jakarta.persistence.Table;
 public class OrderDetails {
 	@Id
 	int id;
-	@Column(name = "Date_of_Purchase")
-	Date DateOfPurchase;
+	Date Date_Of_Purchase;
 	float total;
 	int customer_id;
 	String payment_mode;
@@ -21,10 +20,10 @@ public class OrderDetails {
 	public OrderDetails() {
 		super();
 	}
-	public OrderDetails(int id, Date dateOfPurchase, float total, int customer_id, String payment_mode, int shop_id) {
+	public OrderDetails(int id, Date Date_Of_Purchase, float total, int customer_id, String payment_mode, int shop_id) {
 		super();
 		this.id = id;
-		DateOfPurchase = dateOfPurchase;
+		this.Date_Of_Purchase = Date_Of_Purchase;
 		this.total = total;
 		this.customer_id = customer_id;
 		this.payment_mode = payment_mode;
@@ -36,11 +35,11 @@ public class OrderDetails {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Date getDateOfPurchase() {
-		return DateOfPurchase;
+	public Date getDate_Of_Purchase() {
+		return Date_Of_Purchase;
 	}
-	public void setDateOfPurchase(Date dateOfPurchase) {
-		DateOfPurchase = dateOfPurchase;
+	public void setDate_Of_Purchase(Date date_Of_Purchase) {
+		Date_Of_Purchase = date_Of_Purchase;
 	}
 	public float getTotal() {
 		return total;
@@ -66,5 +65,4 @@ public class OrderDetails {
 	public void setShop_id(int shop_id) {
 		this.shop_id = shop_id;
 	}
-	
 }

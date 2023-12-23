@@ -22,14 +22,13 @@ public class OrderDetailsService {
 	
 	public OrderDetails update(int id, OrderDetails orderdetails) {
 		OrderDetails od = orderdetailsrepository.findById(id).get();
-		od.setDateOfPurchase(orderdetails.getDateOfPurchase());
+		od.setDate_Of_Purchase(orderdetails.getDate_Of_Purchase());
 		od.setTotal(orderdetails.getTotal());
 		od.setCustomer_id(orderdetails.getCustomer_id());
 		od.setPayment_mode(orderdetails.getPayment_mode());
 		od.setCustomer_id(orderdetails.getCustomer_id());
 		return orderdetailsrepository.save(od);
 	}
-	
 	public String delete(int id) {
 		orderdetailsrepository.deleteById(id);
 		return "Entity deleted "+id;
